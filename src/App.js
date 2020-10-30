@@ -18,8 +18,6 @@ function App() {
           <Route exact path="/" component={Homepage} />
           <Route path="/add-phone-number" component={AddPhoneNumber} />
           <Route path="/phone-number" component={PhoneNumber} />
-          <Route path="/pdf-viewer" component={ViewPDF} />
-
         </main>
         <Footer />
 
