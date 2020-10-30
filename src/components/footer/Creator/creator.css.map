@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACG,aADU,CACV,KAAK,CAAC;EACH,UAAU,EAAE,GAAG;CACjB",
+    "sources": [
+        "creator.scss"
+    ],
+    "names": [],
+    "file": "creator.css"
+}

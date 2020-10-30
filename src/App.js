@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom/cjs/react-router-dom.min';
+import Navrow from './components/navigation/navrow'
+import Homepage from './components/pages/home/homepage';
+import AddPhoneNumber from './components/pages/PhoneNumber/AddPhoneNumber/add_phone_number';
+import PhoneNumber from './components/pages/PhoneNumber/phone_number';
+import { Footer } from './components/footer/footer.js'
+import ViewPDF from './components/pages/pdfViewer/pdf_viewer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <header className="app-header">
+          <Navrow />
+        </header>
+        <main>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/add-phone-number" component={AddPhoneNumber} />
+          <Route path="/phone-number" component={PhoneNumber} />
+          <Route path="/pdf-viewer" component={ViewPDF} />
+
+        </main>
+        <Footer />
+
+      </div>
+    </BrowserRouter>
   );
 }
 

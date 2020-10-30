@@ -1,0 +1,64 @@
+.contact-us-page {
+   padding: 100px;
+   margin-top: 50px;
+
+   .add-contact-form {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .number-input {
+      position: relative;
+      .number-input-field {
+         display: flex;
+         align-items: center;
+         height: 20%;
+      }      
+      .prefix {
+         background-color: rgba(128, 128, 128, 0.589);
+         position: absolute;
+         font-size: 14pt;
+         padding: 15px 4px;
+         padding-left: 8px;
+         color: rgba(0, 0, 0, 0.87);
+         z-index: 1000;
+         left: 0;
+      }
+
+      .number {
+         position: relative;
+         width: 100%;
+         font-size: 14pt;
+         padding-left: 43px;
+         box-sizing: border-box;
+      }
+   }
+
+   .add-contact-input {
+      font-family: 'Times New Roman', Times, serif;
+      height: 50px;
+      width: 100%;
+      font-size: 14pt;
+      box-sizing: border-box;
+      padding: 0 10px;
+      border: none;
+      margin-bottom: 5px;
+      margin: 10px 0;
+      border-radius: 5px;
+   }
+
+   .input-container {
+      margin: 10px 0;
+   }
+
+   button {
+      border: none;
+      color: black;
+      font-size: 14pt;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: grey;
+      height: 50px;
+      width: 80%;
+      margin: 0 auto;
+   }
+}
