@@ -1,36 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import firebase from 'firebase/app';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { applyMiddleware, compose, createStore } from 'redux';
-import { Provider } from 'react-redux';
-import { getFirebase, ReactReduxFirebaseProvider } from 'react-redux-firebase';
-import rootReducer from './components/Redux/reducers/root_reducers';
-import thunk from 'redux-thunk';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import firebase from "firebase/app";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import { applyMiddleware, compose, createStore } from "redux";
+import { Provider } from "react-redux";
+import { getFirebase, ReactReduxFirebaseProvider } from "react-redux-firebase";
+import rootReducer from "./components/Redux/reducers/root_reducers";
+import thunk from "redux-thunk";
 // import { reduxFirestore } from 'redux-firestore';
-import firebaseConfig from './components/firebase/config';
+import firebaseConfig from "./components/firebase/config";
 
 firebase.initializeApp(firebaseConfig);
 
-const store = createStore(rootReducer, compose(applyMiddleware(thunk.withExtraArgument({ getFirebase }))))
+const store = createStore(
+  rootReducer,
+  compose(applyMiddleware(thunk.withExtraArgument({ getFirebase })))
+);
 
 const rrfProps = {
   firebase,
   config: firebaseConfig,
-  dispatch: store.dispatch
-}
+  dispatch: store.dispatch,
+};
 
 ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...rrfProps}>
       <React.StrictMode>
         <App />
-      </React.StrictMode>,
+      </React.StrictMode>
+      ,
     </ReactReduxFirebaseProvider>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

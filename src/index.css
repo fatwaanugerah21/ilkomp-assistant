@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #1a1a2e;
@@ -9,7 +9,7 @@ body {
 }
 
 .card {
-  padding: .5% 1%;
+  padding: 0.5% 1%;
 }
 
 .second-background-color {
@@ -29,7 +29,7 @@ body {
 }
 
 .title {
-  font-size: 24px;
+  font-size: 20pt;
   font-weight: 600;
 }
 
@@ -44,7 +44,6 @@ body {
 .active {
   display: flex !important;
 }
-
 
 li {
   list-style: none;
@@ -61,14 +60,13 @@ a {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .app {
   height: 100vh !important;
 }
-
 
 @media (min-width: 768px) {
   .hide-on-mobile {
