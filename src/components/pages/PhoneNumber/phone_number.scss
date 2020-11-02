@@ -1,48 +1,75 @@
 .phone-number-page {
-   background-image: linear-gradient(to right, #79B2BA, #71E3F1);
-   padding: 20px 0;
+  background-image: linear-gradient(to right, #79b2ba, #71e3f1);
+  padding: 20px 0;
 
-   .lecturer-info-item {
-      padding: 15px;
-      margin: 1rem;
-      background-color: rgba(212, 239, 250, 0.76);
+  .lecturer-info-item {
+    padding: 15px;
+    margin: 1rem;
+    background-color: rgba(212, 239, 250, 0.76);
 
-      .lecturer-info {
-         padding: 10px;
-         background-color: white;
-         border: solid .5px grey;
+    .lecturer-info {
+      padding: 10px;
+      background-color: white;
+      border: solid 0.5px grey;
+      min-height: 100%;
+      min-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
-         .lecturer-name {
-            margin-top: 4px;
-            font-weight: 800;
-            font-size: 20pt;
-         }
+      .lecturer-name {
+        margin-top: 4px;
+        font-weight: 800;
+        font-size: 20pt;
       }
-   }
+    }
+  }
 }
 
 .other-menu-item {
-   cursor: pointer;
-   padding: 2rem;
-   margin: 1rem;
-   text-align: center;
-   background-color: blueviolet;
-   font-size: 18pt;
+  cursor: pointer;
+  padding: 2rem;
+  margin: 1rem;
+  text-align: center;
+  background-color: blueviolet;
+  font-size: 18pt;
 }
 
 @media (min-width: 768px) {
-   .row {
+  .phone-number-page {
+    .row {
+      display: flex;
+      flex-direction: column;
+
+      .lecturer-info-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+
+      .other-menu-item {
+        max-height: 10%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .phone-number-page {
+    .row {
       display: grid;
       grid-template-columns: 70% 30%;
 
       .lecturer-info-container {
-         display: grid;
-         grid-template-columns: 50% 50%;
+        display: grid;
+        grid-template-columns: 50% 50%;
 
+        .lecturer-info {
+        }
       }
-   }
+    }
 
-   .other-menu-item {
-      max-height: 10%;
-   }
+    .other-menu-item {
+      max-height: 12%;
+    }
+  }
 }

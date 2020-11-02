@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACG,aADU,CACV,KAAK,AAAC,CACH,UAAU,CAAE,GAAG,CACjB",
+    "sources": [
+        "creator.scss"
+    ],
+    "names": [],
+    "file": "creator.min.css"
+}
