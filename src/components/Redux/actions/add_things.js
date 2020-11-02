@@ -3,11 +3,16 @@ const firebase = require("firebase");
 export const AddPhoneNumberAction = (information) => {
   return (dispatch, getState, { getFirebase }) => {
     const firestore = getFirebase().firestore();
-    firestore.collection("phone-number").add({
-      lecturerName: information.name,
-      lecturerPhoneNumber: information.prefix + information.number,
-      lecturerAdders: information.address,
-    });
+    firestore
+      .collection("phone-number")
+      .add({
+        lecturerName: information.name,
+        lecturerPhoneNumber: information.prefix + information.number,
+        lecturerAdders: information.address,
+      })
+      .then((data) => {
+        dispatch({ type: "AddedPhoneNumber", data });
+      });
   };
 };
 

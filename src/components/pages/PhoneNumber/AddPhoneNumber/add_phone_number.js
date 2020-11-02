@@ -3,6 +3,7 @@ import { AddPhoneNumberAction } from "../../../Redux/actions/add_things";
 import { connect } from "react-redux";
 import "intl-tel-input/build/css/intlTelInput.css";
 import "./add_phone_number.min.css";
+import { getPhoneNumberData } from "../../../Redux/actions/get_data_actions";
 
 const AddPhoneNumber = (props) => {
   const [state, setState] = useState({
@@ -54,45 +55,44 @@ const AddPhoneNumber = (props) => {
   };
 
   return (
-   
-      <div className="contact-us-page card container">
-        <form onSubmit={handleSubmit} className="add-contact-form">
-          <div className="name-input input-container">
-            <span className="label white-text">Nama Dosen :</span>
+    <div className="contact-us-page card container">
+      <form onSubmit={handleSubmit} className="add-contact-form">
+        <div className="name-input input-container">
+          <span className="label white-text">Nama Dosen :</span>
+          <input
+            className="add-contact-input"
+            id="name"
+            type="text"
+            placeholder="Pak Iswanto"
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="number-input input-container">
+          <span className="Label white-text">Nomor Handphone :</span>
+          <div className="number-input-field">
+            <span className="prefix white-text">+62 </span>
             <input
-              className="add-contact-input"
-              id="name"
+              className="add-contact-input number"
+              value={numberShow()}
               type="text"
-              placeholder="Pak Iswanto"
-              onChange={handleInputChange}
+              placeholder="812 3456 7890"
+              onChange={handlePhoneChange}
             />
           </div>
-          <div className="number-input input-container">
-            <span className="Label white-text">Nomor Handphone :</span>
-            <div className="number-input-field">
-              <span className="prefix white-text">+62 </span>
-              <input
-                className="add-contact-input number"
-                value={numberShow()}
-                type="text"
-                placeholder="812 3456 7890"
-                onChange={handlePhoneChange}
-              />
-            </div>
-          </div>
-          <div className="address-input input-container">
-            <span className="addres-label white-text">Alamat :</span>
-            <input
-              className="add-contact-input"
-              id="address"
-              type="address"
-              placeholder="Jl. Cakalang"
-              onChange={handleInputChange}
-            />
-          </div>
-          <button>Submit</button>
-        </form>
-      </div>
+        </div>
+        <div className="address-input input-container">
+          <span className="addres-label white-text">Alamat :</span>
+          <input
+            className="add-contact-input"
+            id="address"
+            type="address"
+            placeholder="Jl. Cakalang"
+            onChange={handleInputChange}
+          />
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
   );
 };
 
@@ -100,6 +100,9 @@ const addDispatchToProps = (dispatch) => {
   return {
     addPhoneNumber: (information) => {
       dispatch(AddPhoneNumberAction(information));
+    },
+    getPhoneData: () => {
+      dispatch(getPhoneNumberData());
     },
   };
 };

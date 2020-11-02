@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 // import { Redirect } from "react-router-dom";
 import { deletePhoneNumber } from "../../Redux/actions/delete_things";
-import { getPhoneNumberData } from "../../Redux/actions/get_data_actions";
+import {
+  getPhoneDummyData,
+  getPhoneNumberData,
+} from "../../Redux/actions/get_data_actions";
 import AddPhoneNumber from "./AddPhoneNumber/add_phone_number";
 import "./phone_number.min.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -12,9 +15,10 @@ import OwnModal from "../../modal/ownModal";
 const PhoneNumber = (props) => {
   var { firestoreData } = props;
   const [showModal, setShowModal] = useState(false);
+  console.log(props);
 
   useEffect(() => {
-    props.getPhoneNumberData();
+    props.getFirestoreData();
   }, [props]);
 
   if (!props.firestoreData.phoneNumberData) {
@@ -25,7 +29,7 @@ const PhoneNumber = (props) => {
         color="#00BFFF"
         height={100}
         width={100}
-        timeout={3000} //3 secs
+        timeout={3000}
       />
     );
   }
@@ -51,7 +55,7 @@ const PhoneNumber = (props) => {
     <div className="container phone-number-page">
       <OwnModal
         show={showModal}
-        headerText={<h1>Tambah nomor handphone</h1>}
+        headerText="Tambah nomor handphone"
         onClick={() => {
           setShowModal(false);
         }}
@@ -74,7 +78,6 @@ const PhoneNumber = (props) => {
 const mapStateToProps = (state) => {
   return {
     firestoreData: state.getFirestoreData,
-    dataIsDeleted: state.getFirestoreData.isDeletedData,
   };
 };
 
