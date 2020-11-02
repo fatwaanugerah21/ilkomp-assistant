@@ -1,15 +1,5 @@
-const initialState = {
-  phoneNumberData: [
-    {
-      id: 1,
-      lecturerName: "Fatwa Anugerah Nasir",
-      lecturerPhoneNumber: "+62 852 9901 4599",
-      lecturerAdders: "Jl. R.A Kartini No.10",
-    },
-  ],
-};
 
-const getDataFromFirestore = (state = initialState, action) => {
+const getDataFromFirestore = (state, action) => {
   if (action.type) {
     switch (action.type) {
       case "PHONE_NUMBER_STORED":

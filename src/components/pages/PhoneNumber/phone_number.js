@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-// import { Redirect } from "react-router-dom";
 import { deletePhoneNumber } from "../../Redux/actions/delete_things";
 import {
-  getPhoneDummyData,
   getPhoneNumberData,
 } from "../../Redux/actions/get_data_actions";
 import AddPhoneNumber from "./AddPhoneNumber/add_phone_number";
@@ -29,10 +27,10 @@ const PhoneNumber = (props) => {
         color="#00BFFF"
         height={100}
         width={100}
-        timeout={3000} 
+        timeout={3000}
       />
     );
-}
+  }
 
   const pageContent = firestoreData.phoneNumberData.map((data) => {
     return (
@@ -85,7 +83,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getPhoneNumberData: () => dispatch(getPhoneNumberData()),
     deletePhone: (id) => dispatch(deletePhoneNumber(id)),
-    getPhoneDummy: () => dispatch(getPhoneDummyData()),
   };
 };
 

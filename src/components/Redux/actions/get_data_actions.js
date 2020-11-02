@@ -77,9 +77,3 @@ export const getScheduleData = () => {
       .then(dispatch({ type: "GET_SCHEDULE", data }));
   };
 };
-
-export const getPhoneDummyData = () => {
-  return (dispatch, getState) => {
-    dispatch({ type: "GET_DUMMY_DATA" });
-  };
-};
