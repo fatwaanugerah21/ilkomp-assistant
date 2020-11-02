@@ -18,7 +18,7 @@ const PhoneNumber = (props) => {
   console.log(props);
 
   useEffect(() => {
-    props.getFirestoreData();
+    props.getPhoneDummy();
   }, [props]);
 
   if (!props.firestoreData.phoneNumberData) {
@@ -29,10 +29,10 @@ const PhoneNumber = (props) => {
         color="#00BFFF"
         height={100}
         width={100}
-        timeout={3000}
+        timeout={3000} 
       />
     );
-  }
+}
 
   const pageContent = firestoreData.phoneNumberData.map((data) => {
     return (
@@ -85,6 +85,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getPhoneNumberData: () => dispatch(getPhoneNumberData()),
     deletePhone: (id) => dispatch(deletePhoneNumber(id)),
+    getPhoneDummy: () => dispatch(getPhoneDummyData()),
   };
 };
 

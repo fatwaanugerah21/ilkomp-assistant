@@ -78,8 +78,8 @@ export const getScheduleData = () => {
   };
 };
 
-// export const getPhoneDummyData = () => {
-//   return (dispatch, getState) => {
-//     dispatch({ type: "GET_DUMMY_DATA" });
-//   };
-// };
+export const getPhoneDummyData = () => {
+  return (dispatch, getState) => {
+    dispatch({ type: "GET_DUMMY_DATA" });
+  };
+};
