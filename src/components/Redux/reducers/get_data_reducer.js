@@ -1,5 +1,4 @@
-
-const getDataFromFirestore = (state, action) => {
+const getDataFromFirestore = (state = {}, action) => {
   if (action.type) {
     switch (action.type) {
       case "PHONE_NUMBER_STORED":

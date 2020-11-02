@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { deletePhoneNumber } from "../../Redux/actions/delete_things";
-import {
-  getPhoneNumberData,
-} from "../../Redux/actions/get_data_actions";
+import { getPhoneNumberData } from "../../Redux/actions/get_data_actions";
 import AddPhoneNumber from "./AddPhoneNumber/add_phone_number";
 import "./phone_number.min.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -16,7 +14,7 @@ const PhoneNumber = (props) => {
   console.log(props);
 
   useEffect(() => {
-    props.getPhoneDummy();
+    props.getPhoneNumberData();
   }, [props]);
 
   if (!props.firestoreData.phoneNumberData) {
