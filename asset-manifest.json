@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/ilkomp-assistant/static/css/main.142bb487.chunk.css",
+    "main.js": "/ilkomp-assistant/static/js/main.db60b7b0.chunk.js",
+    "main.js.map": "/ilkomp-assistant/static/js/main.db60b7b0.chunk.js.map",
+    "runtime-main.js": "/ilkomp-assistant/static/js/runtime-main.2767f0fe.js",
+    "runtime-main.js.map": "/ilkomp-assistant/static/js/runtime-main.2767f0fe.js.map",
+    "static/css/2.9147d2b4.chunk.css": "/ilkomp-assistant/static/css/2.9147d2b4.chunk.css",
+    "static/js/2.b2e23653.chunk.js": "/ilkomp-assistant/static/js/2.b2e23653.chunk.js",
+    "static/js/2.b2e23653.chunk.js.map": "/ilkomp-assistant/static/js/2.b2e23653.chunk.js.map",
+    "index.html": "/ilkomp-assistant/index.html",
+    "static/css/2.9147d2b4.chunk.css.map": "/ilkomp-assistant/static/css/2.9147d2b4.chunk.css.map",
+    "static/css/main.142bb487.chunk.css.map": "/ilkomp-assistant/static/css/main.142bb487.chunk.css.map",
+    "static/js/2.b2e23653.chunk.js.LICENSE.txt": "/ilkomp-assistant/static/js/2.b2e23653.chunk.js.LICENSE.txt",
+    "static/media/CloseIcon.c4abb3db.svg": "/ilkomp-assistant/static/media/CloseIcon.c4abb3db.svg",
+    "static/media/Group 2.5a68d7e0.svg": "/ilkomp-assistant/static/media/Group 2.5a68d7e0.svg",
+    "static/media/burger-icon.d17fc4d9.svg": "/ilkomp-assistant/static/media/burger-icon.d17fc4d9.svg",
+    "static/media/facebook.02535181.svg": "/ilkomp-assistant/static/media/facebook.02535181.svg",
+    "static/media/intlTelInput.css": "/ilkomp-assistant/static/media/flags@2x.9d5328fb.png",
+    "static/media/instagram.e8286fef.svg": "/ilkomp-assistant/static/media/instagram.e8286fef.svg",
+    "static/media/linkedin.f42e04d0.svg": "/ilkomp-assistant/static/media/linkedin.f42e04d0.svg",
+    "static/media/add_task.css": "/ilkomp-assistant/static/media/new-task.be28262f.jpg",
+    "static/media/phone_number.css": "/ilkomp-assistant/static/media/phone-number.5c9dbbc3.jpg",
+    "static/media/schedule.css": "/ilkomp-assistant/static/media/schedule.08869bbf.jpg",
+    "static/media/task_list.css": "/ilkomp-assistant/static/media/task-list.c7442e73.jpg",
+    "static/media/twitter.f9992582.svg": "/ilkomp-assistant/static/media/twitter.f9992582.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2767f0fe.js",
+    "static/css/2.9147d2b4.chunk.css",
+    "static/js/2.b2e23653.chunk.js",
+    "static/css/main.142bb487.chunk.css",
+    "static/js/main.db60b7b0.chunk.js"
+  ]
+}
