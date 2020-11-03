@@ -8,6 +8,7 @@ import Homepage from "./components/pages/home/homepage";
 import AddPhoneNumber from "./components/pages/PhoneNumber/AddPhoneNumber/add_phone_number";
 import PhoneNumber from "./components/pages/PhoneNumber/phone_number";
 import { Footer } from "./components/footer/footer.js";
+import Schedules from "./components/pages/Schedules/schedules";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/" component={Homepage} />
           <Route path="/add-phone-number" component={AddPhoneNumber} />
           <Route path="/phone-number" component={PhoneNumber} />
+          <Route path="/schedule" component={Schedules} />
         </main>
         <Footer />
       </div>
