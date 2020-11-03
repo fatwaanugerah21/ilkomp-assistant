@@ -7,7 +7,7 @@
   overflow-y: auto;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.6);
-  transition: all 500ms;
+  transition: all 400ms;
 
   .modal-main {
     position: relative;
@@ -17,7 +17,7 @@
     overflow-y: hidden;
     border-radius: 20px;
     z-index: 10000;
-    animation: modal-animation 1s ease forwards;
+    animation: slide-to-bottom 500ms ease forwards;
 
     .modal-header {
       display: flex;
@@ -45,14 +45,5 @@
       padding: 20px;
       margin-top: 40px;
     }
-  }
-}
-
-@keyframes modal-animation {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0px);
   }
 }

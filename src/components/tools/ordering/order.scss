@@ -1,0 +1,20 @@
+.active-order {
+  font-size: 17pt;
+}
+
+.non-active-order {
+  opacity: 0.4;
+  font-size: 14pt;
+}
+
+.sort-order {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 15px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+
+}
