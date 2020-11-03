@@ -26,7 +26,10 @@
     "redux-firestore": "^0.13.0",
     "redux-thunk": "^2.3.0"
   },
+
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "git push",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

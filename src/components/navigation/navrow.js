@@ -21,7 +21,7 @@ const Navrow = () => {
         <NavLink to="/">
           <img
             className="ilkomp-assistant-logo"
-            src="images/icons/Ilkomp Assistant.svg"
+            src="favicon.svg"
             alt="ilkomp-logo"
             height="65"
           />
