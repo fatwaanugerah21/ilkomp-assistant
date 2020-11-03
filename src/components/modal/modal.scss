@@ -1,5 +1,4 @@
 .modal {
-  overflow: initial;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +14,7 @@
     background: rgb(44, 42, 42);
     margin: 5% auto;
     width: 50%;
-    overflow-y: auto;
+    overflow-y: hidden;
     border-radius: 20px;
     z-index: 10000;
     animation: modal-animation 1s ease forwards;

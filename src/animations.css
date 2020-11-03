@@ -6,3 +6,12 @@
     opacity: 1;
   }
 }
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./schedules.min.css";
 
 const Schedules = (props) => {
   const schedulesList = [
@@ -20,18 +21,17 @@ const Schedules = (props) => {
     },
   ];
 
-  return (
-    <div className="shedules-page">
-      {schedulesList.map((data) => {
-        console.log(data);
-        return (
-          <div className="container schedule">
-            <div className="schedule-name">{data.name}</div>
-          </div>
-        );
-      })}
-    </div>
-  );
+  const pageContent = schedulesList.map((data) => {
+    console.log(data);
+    return (
+      <div className="schedule-item card" key={data.id}>
+        <li className="schedule-name">{data.name}</li>
+        <li className="schedule-time">{data.time}</li>
+      </div>
+    );
+  });
+
+  return <div className="schedules-page container">{pageContent}</div>;
 };
 
 export default Schedules;

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { deletePhoneNumber } from "../../Redux/actions/delete_things";
@@ -14,8 +15,9 @@ const PhoneNumber = (props) => {
 
   useEffect(() => {
     props.getPhoneNumberData();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [showModal]);
 
   if (!props.firestoreData.phoneNumberData) {
     return (
@@ -30,20 +32,45 @@ const PhoneNumber = (props) => {
     );
   }
 
+  console.log(firestoreData);
+
   const pageContent = firestoreData.phoneNumberData.map((data) => {
     return (
-      <li className="lecturer-info-item" key={data.id}>
+      <div className="lecturer-info-item" key={data.id}>
         <div className="card lecturer-info">
-          <span className="lecturer-name">{data.lecturerName}</span>
-          <p className="lecturer-phone-number">
-            Nomor : {data.lecturerPhoneNumber}
-          </p>
-          <p className="lecturer-address">Alamat : {data.lecturerAdders}</p>
-          <button onClick={() => props.deletePhone(data.id)}>
-            Delete phone
-          </button>
+          <div className="section-1">
+            <img
+              src="/images/Logo Unhas.png"
+              alt="Lecturer Profile"
+              className="profile-image"
+              height="150"
+            />
+          </div>
+          <div className="section-2">
+            <ul>
+              <li className="first-list">
+                <p className="lecturer-name">{data.name}</p>
+              </li>
+              <li>
+                <p className="lecturer-phone-number">{data.phoneNumber}</p>
+              </li>
+              <li>
+                <p className="lecturer-address">{data.address}</p>
+              </li>
+              <li>
+                <a href="#" className="lecturer-email">
+                  {data.email}
+                </a>
+              </li>
+              <li>
+                <button onClick={() => props.deletePhone(data.id)}>
+                  Delete phone
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-      </li>
+      </div>
     );
   });
 
@@ -56,7 +83,11 @@ const PhoneNumber = (props) => {
           setShowModal(false);
         }}
       >
-        <AddPhoneNumber />
+        <AddPhoneNumber
+          onSubmit={() => {
+            setShowModal(false);
+          }}
+        />
       </OwnModal>
       <div className="row">
         <div className="lecturer-info-container">{pageContent}</div>

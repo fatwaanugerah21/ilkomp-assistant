@@ -1,0 +1,11 @@
+.schedules-page{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .schedule-item {
+    color: white;
+    background-color: red;
+  }
+
+}

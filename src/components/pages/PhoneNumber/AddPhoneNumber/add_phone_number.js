@@ -4,22 +4,22 @@ import { connect } from "react-redux";
 import "intl-tel-input/build/css/intlTelInput.css";
 import "./add_phone_number.min.css";
 import { getPhoneNumberData } from "../../../Redux/actions/get_data_actions";
-// import { Redirect } from "react-router-dom";
 
 const AddPhoneNumber = (props) => {
   const [state, setState] = useState({
     name: null,
     address: null,
     number: "",
+    email: "",
     prefix: "+62 ",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (state.name && state.address && state.number) {
-      // props.addPhoneNumber({ ...state, number: state.prefix + state.number });
-      console.log(e.target);
+      props.addPhoneNumber(state);
     }
+    props.onSubmit();
   };
 
   const handleInputChange = (e) => {
@@ -76,6 +76,16 @@ const AddPhoneNumber = (props) => {
               onChange={handlePhoneChange}
             />
           </div>
+        </div>
+        <div className="email-input input-container">
+          <span className="addres-label white-text">Email :</span>
+          <input
+            className="add-contact-input"
+            id="email"
+            type="email"
+            placeholder="fatwaanugerah21@gmail.com"
+            onChange={handleInputChange}
+          />
         </div>
         <div className="address-input input-container">
           <span className="addres-label white-text">Alamat :</span>

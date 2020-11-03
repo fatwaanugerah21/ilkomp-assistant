@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,AAAA,CACb,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,WAAW,CAAE,OAAO,CAOrB,AAVD,AAKE,eALa,CAKb,cAAc,AAAC,CACb,KAAK,CAAE,KAAK,CACZ,gBAAgB,CAAE,GAAG,CACtB",
+    "sources": [
+        "schedules.scss"
+    ],
+    "names": [],
+    "file": "schedules.min.css"
+}

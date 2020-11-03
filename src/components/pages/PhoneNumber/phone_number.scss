@@ -6,36 +6,47 @@
     padding: 15px;
     margin: 1rem;
     background-color: rgba(212, 239, 250, 0.76);
-    animation: lecturer-info-item 400ms;
+    animation: fade-in 500ms;
 
     .lecturer-info {
       padding: 10px;
       background-color: white;
-      min-height: 100%;
-      min-width: 100%;
+      min-height: calc(100% - 20px);
+      min-width: calc(100% - 20px);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       align-items: center;
-      display: grid;
-      animation: lecturer-info 400ms;
+      animation: fade-in 700ms;
 
-      .lecturer-name {
-        margin-top: 4px;
-        font-weight: 800;
-        font-size: 1.3rem;
-        text-align: center;
+      .section-1 {
+        border-bottom: solid 2px;
+        padding: 10px 0 30px;
+
+        .profile-image {
+          display: flex;
+          height: 150px;
+          margin: auto;
+        }
       }
 
-      .lecturer-phone-number {
-        padding-top: 12px;
-        font-size: 14pt;
-      }
+      .section-2 {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
 
-      .lecturer-address {
-        padding: 12px 0px 15px;
-        font-size: 14pt;
-        margin-top: auto;
+        ul {
+          li {
+            border-bottom: 1px solid gray;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 14pt;
+
+            .lecturer-name {
+              font-size: 16pt;
+            }
+          }
+        }
       }
     }
   }
@@ -46,10 +57,11 @@
     align-items: center;
     padding: 2rem;
     margin: 1rem;
+    max-height: 120px;
     background-color: blueviolet;
     font-size: 18pt;
     text-align: center;
-    animation: lecturer-info 400ms;
+    animation: slide-in 200ms;
   }
 }
 
@@ -62,10 +74,6 @@
       .lecturer-info-container {
         display: grid;
         grid-template-columns: 50% 50%;
-      }
-
-      .other-menu-item {
-        max-height: 10%;
       }
     }
   }
@@ -81,10 +89,6 @@
         display: grid;
         grid-template-columns: 50% 50%;
       }
-
-      .other-menu-item {
-        max-height: 12%;
-      }
     }
   }
 }
@@ -93,22 +97,4 @@
   height: 80vh;
   width: 96vw;
   overflow: hidden;
-}
-
-@keyframes lecturer-info-item {
-  from {
-    transform: translateX(-5px);
-  }
-  to {
-    transform: translatex(0);
-  }
-}
-
-@keyframes lecturer-info {
-  from {
-    transform: translateY(2px);
-  }
-  to {
-    transform: translateY(0);
-  }
 }

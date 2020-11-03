@@ -4,9 +4,10 @@ export const AddPhoneNumberAction = (information) => {
     firestore
       .collection("phone-number")
       .add({
-        lecturerName: information.name,
-        lecturerPhoneNumber: information.prefix + information.number,
-        lecturerAddress: information.address,
+        name: information.name,
+        phoneNumber: information.prefix + information.number,
+        email: information.email,
+        address: information.address,
       })
       .then((data) => {
         dispatch({ type: "AddedPhoneNumber", data });
