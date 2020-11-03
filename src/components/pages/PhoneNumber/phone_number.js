@@ -40,7 +40,7 @@ const PhoneNumber = (props) => {
         <div className="card lecturer-info">
           <div className="section-1">
             <img
-              src="/images/Logo Unhas.png"
+              src="https://lh3.googleusercontent.com/JMXVHxENS15Hi-X9QtcpKabmRNlPhBMzTm1Q68lzBjDD7LqtxR2nV3qk66aTlxoDqJNfz1vknM8ke6d0PbYQ=w1920-h902"
               alt="Lecturer Profile"
               className="profile-image"
               height="150"
