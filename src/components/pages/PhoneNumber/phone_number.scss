@@ -6,6 +6,7 @@
     padding: 15px;
     margin: 1rem;
     background-color: rgba(212, 239, 250, 0.76);
+    animation: lecturer-info-item 400ms;
 
     .lecturer-info {
       padding: 10px;
@@ -17,6 +18,7 @@
       text-overflow: ellipsis;
       align-items: center;
       display: grid;
+      animation: lecturer-info 400ms;
 
       .lecturer-name {
         margin-top: 4px;
@@ -26,27 +28,29 @@
       }
 
       .lecturer-phone-number {
+        padding-top: 12px;
         font-size: 14pt;
       }
 
       .lecturer-address {
+        padding: 12px 0px 15px;
         font-size: 14pt;
         margin-top: auto;
       }
     }
   }
-}
-
-.other-menu-item {
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  margin: 1rem;
-  background-color: blueviolet;
-  font-size: 18pt;
-  text-align: center;
+  .other-menu-item {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: blueviolet;
+    font-size: 18pt;
+    text-align: center;
+    animation: lecturer-info 400ms;
+  }
 }
 
 @media (min-width: 768px) {
@@ -87,6 +91,24 @@
 
 .spinner {
   height: 80vh;
-  width: 80vw;
+  width: 96vw;
   overflow: hidden;
+}
+
+@keyframes lecturer-info-item {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translatex(0);
+  }
+}
+
+@keyframes lecturer-info {
+  from {
+    transform: translateY(2px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

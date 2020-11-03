@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./navrow.css";
+import "./navrow.min.css";
 import BurgerMenu from "./burger-icon.svg";
 import CancelIcon from "./CloseIcon.svg";
 
@@ -21,9 +21,9 @@ const Navrow = () => {
         <NavLink to="/">
           <img
             className="ilkomp-assistant-logo"
-            src="/images/icons/Ilkomp Assistant.svg"
+            src="images/icons/Ilkomp Assistant.svg"
             alt="ilkomp-logo"
-            height="80"
+            height="65"
           />
         </NavLink>
         <img

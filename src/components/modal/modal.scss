@@ -8,9 +8,7 @@
   overflow-y: auto;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.6);
-  transition: all;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+  transition: all 500ms;
 
   .modal-main {
     position: relative;
@@ -20,9 +18,7 @@
     overflow-y: auto;
     border-radius: 20px;
     z-index: 10000;
-    transition: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
+    animation: modal-animation 1s ease forwards;
 
     .modal-header {
       display: flex;
@@ -30,7 +26,7 @@
       align-items: center;
       padding: 20px;
       background-color: rgba(196, 193, 193, 0.842);
-      // border-bottom: 2px solid grey; 
+      // border-bottom: 2px solid grey;
       box-shadow: 0 0 10px grey;
       position: relative;
       text-align: center;
@@ -50,5 +46,14 @@
       padding: 20px;
       margin-top: 40px;
     }
+  }
+}
+
+@keyframes modal-animation {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
   }
 }

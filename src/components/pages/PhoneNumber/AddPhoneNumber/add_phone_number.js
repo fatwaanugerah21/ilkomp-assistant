@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import "intl-tel-input/build/css/intlTelInput.css";
 import "./add_phone_number.min.css";
 import { getPhoneNumberData } from "../../../Redux/actions/get_data_actions";
+// import { Redirect } from "react-router-dom";
 
 const AddPhoneNumber = (props) => {
   const [state, setState] = useState({
@@ -16,12 +17,8 @@ const AddPhoneNumber = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (state.name && state.address && state.number) {
-      setState({
-        ...state,
-        number: state.prefix + state.number,
-      });
-      props.addPhoneNumber(state);
-      props.onClick();
+      // props.addPhoneNumber({ ...state, number: state.prefix + state.number });
+      console.log(e.target);
     }
   };
 

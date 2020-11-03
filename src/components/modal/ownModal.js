@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./modal.min.css";
 
 const OwnModal = (props) => {
-  var visibility = props.show ? "show" : "display-none";
+  var visibility = props.show ? "modal-open show" : "display-none";
 
   const handleClick = (e) => {
-    if (e.target === document.getElementById("modal")) {
+    if (e.target === document.getElementById("modal") || e.keyCode === 27) {
       props.onClick();
     }
   };
+
+  useEffect(() => {
+    const event = window.addEventListener("keyup", (e) => {
+      if (e.keyCode === 27) {
+        props.onClick();
+      }
+      return window.removeEventListener("keyup", event);
+    });
+  });
 
   const footer = props.footer ? props.footer : "";
   return (

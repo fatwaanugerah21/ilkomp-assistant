@@ -11,11 +11,11 @@ import OwnModal from "../../modal/ownModal";
 const PhoneNumber = (props) => {
   var { firestoreData } = props;
   const [showModal, setShowModal] = useState(false);
-  console.log(props);
 
   useEffect(() => {
     props.getPhoneNumberData();
-  }, [props]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (!props.firestoreData.phoneNumberData) {
     return (

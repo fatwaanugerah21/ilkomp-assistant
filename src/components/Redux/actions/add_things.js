@@ -1,5 +1,3 @@
-const firebase = require("firebase");
-
 export const AddPhoneNumberAction = (information) => {
   return (dispatch, getState, { getFirebase }) => {
     const firestore = getFirebase().firestore();
@@ -16,17 +14,9 @@ export const AddPhoneNumberAction = (information) => {
   };
 };
 
-export const addToStorage = (path, file) => {
-  return () => {
-    console.log("You are in redux");
-    const storageRef = firebase.storage().ref(`${path}/${file.name}`);
-    storageRef.put(file);
-  };
-};
-
 export const AddScheduleAction = (data) => {
   return (dispatch, getState, { getFirebase }) => {
-    const firestore = firebase.firestore();
+    const firestore = getFirebase.firestore();
     firestore.collection("schedule").add({
       scheduleName: data.name,
       scheduleDate: data.date,
