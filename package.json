@@ -3,18 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@date-io/date-fns": "^2.10.6",
-    "@material-ui/core": "^4.9.5",
-    "@material-ui/pickers": "^3.2.10",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.0",
-    "date-fns": "^2.16.1",
     "firebase": "^8.0.0",
     "firebase-tools": "^8.10.0",
-    "intl-tel-input": "^17.0.5",
-    "jslint": "^0.12.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-loader-spinner": "^3.1.14",
@@ -27,11 +21,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "preprepare": "npm run build",
-    "prepare": "git add .",
-    "prepublish": "npm run prepare ",
-    "publish": "git commit ",
-    "predeploy": "npm run publish",
+    "predeploy": "npm run build \"git add .\" \"git commit\"",
     "deploy": "git push",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -55,10 +45,7 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "jshint": "^2.12.0"
-  },
+  "devDependencies": {},
   "author": "fatwa-anugerah",
   "license": "ISC"
 }

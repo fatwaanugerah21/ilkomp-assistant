@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { AddPhoneNumberAction } from "../../../Redux/actions/add_things";
 import { connect } from "react-redux";
-import "intl-tel-input/build/css/intlTelInput.css";
 import "./add_phone_number.min.css";
 import { getPhoneNumberData } from "../../../Redux/actions/get_data_actions";
 
