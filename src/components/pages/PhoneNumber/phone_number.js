@@ -56,23 +56,20 @@ const PhoneNumber = (props) => {
           <div className="section-2">
             <ul>
               <li className="first-list">
-                <p className="lecturer-name">{data.name}</p>
+                <p className="lecturer-name">{data.name ?? "-"}</p>
               </li>
               <li>
-                <p className="lecturer-phone-number">{data.phoneNumber}</p>
-              </li>
-              <li>
-                <p className="lecturer-address">{data.address}</p>
+                <p className="lecturer-phone-number">
+                  {data.phoneNumber ?? "-"}
+                </p>
               </li>
               <li>
                 <a href="#" className="lecturer-email">
-                  {data.email}
+                  {data.email ?? "-"}
                 </a>
               </li>
               <li>
-                <button onClick={() => props.deletePhone(data.id)}>
-                  Delete phone
-                </button>
+                <p className="lecturer-address">{data.address ?? "-"}</p>
               </li>
             </ul>
           </div>

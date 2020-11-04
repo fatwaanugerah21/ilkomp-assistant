@@ -20,6 +20,13 @@ const AddPhoneNumber = (props) => {
       props.addPhoneNumber(state);
     }
     props.onSubmit();
+    setState({
+      name: null,
+      address: null,
+      number: "",
+      email: "",
+      prefix: "+62 ",
+    });
   };
 
   const handleInputChange = (e) => {
