@@ -1,7 +1,7 @@
 import React from "react";
 import FatwaPicture from "./alAlam.jpg";
 import { Link } from "react-router-dom";
-import "./user-profile.css";
+import "./user_profile.min.css";
 
 const UserProfile = () => {
   return (

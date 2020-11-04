@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import backgroundLogo from './Group 2.svg';
-import './homepage.css'
+import './homepage.min.css'
 import UserProfile from './userProfile/user_profile';
 import PhoneNumberMenu from './HandphoneNumber/phone_number';
 import Schedule from './Schedule/schedule';

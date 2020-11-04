@@ -1,58 +1,64 @@
 .homepage-background {
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   height: 100%;
-   // border-top-left-radius: 23px;
-   // border-top-right-radius: 23px;
-   background-image: linear-gradient(to right, #79B2BA, #71E3F1);
-   box-sizing: border-box;
-   // margin-bottom: 0;
-   overflow: hidden;
-   margin: 0 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-image: linear-gradient(to right, #79b2ba, #71e3f1);
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 5%;
 
-   a {
-      color: white;
-   }
+  a {
+    color: white;
+  }
 
-   .homepage-menu {
-      margin: 5% 8.5%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: stretch;
-   }
+  .homepage-menu {
+    margin: 90px 2% 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+  }
 
-   .user-profile {
-      background-color: black;
-   }
+  .user-profile {
+    background-color: black;
+  }
 
-   .row {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-   }
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 
-   .phone-number-menu {
-      margin: 20px;
-      width: 100%;
-   }
+  .phone-number-menu {
+    margin: 20px;
+    width: 100%;
+  }
 }
 
 .homepage-background-logo {
-   position: absolute;
-   overflow: hidden;
-   height: 100%;
-   right: -10%;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  right: -10%;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
+  .homepage-menu{
+    h1 {
+      font-size: 25pt;
+    }
+  }
+}
 
-   .homepage-background {
-     .homepage-menu {
-         h1 {
-            font-size: 30pt;
-         }
-     }
-   }
+
+@media (min-width: 1000px) {
+  .homepage-background {
+    .homepage-menu {
+      margin: 120px 8.5% 60px;
+      h1 {
+        font-size: 30pt;
+      }
+    }
+  }
 }
