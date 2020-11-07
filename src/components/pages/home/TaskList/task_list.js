@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './task_list.css';
+import './task_list.min.css';
 
 const TaskList = () => {
    return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './add_task.css'
+import './add_task.min.css'
 import { Link } from 'react-router-dom'
 
 

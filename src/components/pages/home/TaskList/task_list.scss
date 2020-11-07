@@ -19,15 +19,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-   }
 
-   h1 {
-      font-size: 20pt;
+      h1 {
+         font-size: 18pt !important;
+      }
    }
 }
 
 .task-list-menu:hover {
    transform: scale(1.1);
-   transition-duration: .3s;
+   transition-duration: 0.3s;
 }
-

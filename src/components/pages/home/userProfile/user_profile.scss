@@ -1,11 +1,7 @@
-.user-profil {
+.user-profile {
   display: flex;
   align-items: center;
-  position: absolute;
-  z-index: 100;
-  right: 8.5%;
-  top: 20px;
-  // border: 5px rgba(0, 0, 0, 0.548) solid;
+  justify-items: center;
   border-radius: 10px;
   background-image: radial-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.171));
   padding: 3px 12px 15px;
@@ -48,3 +44,4 @@
     }
   }
 }
+

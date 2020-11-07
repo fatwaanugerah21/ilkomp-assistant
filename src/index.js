@@ -9,7 +9,6 @@ import { Provider } from "react-redux";
 import { getFirebase, ReactReduxFirebaseProvider } from "react-redux-firebase";
 import rootReducer from "./components/Redux/reducers/root_reducers";
 import thunk from "redux-thunk";
-// import { reduxFirestore } from 'redux-firestore';
 import firebaseConfig from "./components/firebase/config";
 import "./animations.css";
 

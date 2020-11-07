@@ -1,11 +1,193 @@
-.schedules-page{
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+.schedules-page {
+   .main-title {
+      text-align: center;
+      font-size: 16pt;
+   }
 
-  .schedule-item {
-    color: white;
-    background-color: red;
-  }
+   .schedules {
+      display: flex;
+      max-width: 100%;
+      margin: auto;
+      justify-content: space-around;
+      flex-wrap: wrap;
 
+      .laptop {
+         width: 220px;
+         height: 320px;
+         position: relative;
+         margin: 30px 26px;
+         cursor: pointer;
+
+         .flip-card-content {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            backface-visibility: hidden;
+            position: absolute;
+            overflow: hidden;
+            transition: transform 0.4s linear;
+            border-radius: 12px;
+         }
+
+         .front-card {
+            background-color: white;
+            z-index: 3;
+
+            .schedule-image {
+               image-rendering: auto;
+               width: 100%;
+               height: 70%;
+               overflow: hidden;
+               filter: brightness(70%);
+            }
+         }
+
+         .card-text {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            z-index: 2;
+            background-color: white;
+
+            li {
+               height: 30px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            }
+
+            .bottom-arrow {
+               margin-top: -20px;
+               font-size: 17pt;
+               cursor: pointer;
+            }
+         }
+      }
+
+      .back-card {
+         background: #f1f1f1;
+         transform: perspective(1000px) rotateY(180deg);
+         color: #2c3e50;
+         text-align: center;
+      }
+
+      .laptop:hover > .front-card {
+         transform: perspective(1000px) rotateY(-180deg);
+      }
+
+      .laptop:hover > .back-card {
+         transform: perspective(1000px) rotateY(0deg);
+      }
+   }
+}
+
+.schedules-page {
+   .phone {
+      width: 220px;
+      height: 320px;
+      position: relative;
+      margin: 30px 26px;
+
+      .flip-card-content {
+         width: 100%;
+         height: 100%;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         backface-visibility: hidden;
+         position: absolute;
+         overflow: hidden;
+         transition: transform 0.4s linear;
+         border-radius: 12px;
+         cursor: pointer;
+      }
+
+      .front-card {
+         background-color: white;
+         z-index: 3;
+         cursor: pointer;
+
+         .schedule-image {
+            image-rendering: auto;
+            width: 100%;
+            height: 70%;
+            overflow: hidden;
+            filter: brightness(70%);
+         }
+      }
+
+      .card-text {
+         position: absolute;
+         width: 100%;
+         bottom: 0;
+         z-index: 2;
+         background-color: white;
+
+         li {
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .bottom-arrow {
+            margin-top: -20px;
+            font-size: 17pt;
+         }
+      }
+
+      .back-card {
+         width: 0;
+         background: #f1f1f1;
+         color: #2c3e50;
+         text-align: center;
+         transition: all .6s;
+         transform: rotateX(180deg);
+      }
+   }
+
+   .show-back {
+      .back-card {
+         width: 100%;
+         position: absolute;
+         background: #f1f1f1;
+         transform: rotateY(180deg);
+         transform: none;
+         color: #2c3e50;
+         z-index: 1000 !important;
+         text-align: center;
+      }
+   }
+}
+
+.back-card-container {
+   li {
+      display: grid;
+      grid-gap: 10px 100px;
+      span {
+         right: 0;
+      }
+   }
+}
+
+@media (min-width: 600px) {
+   .schedules-page {
+      .main-title {
+         font-size: 18pt;
+      }
+   }
+}
+@media (min-width: 700px) {
+   .schedules-page {
+      .main-title {
+         font-size: 20pt;
+      }
+   }
+}
+@media (min-width: 1000px) {
+   .schedules-page {
+      .main-title {
+         font-size: 22pt;
+      }
+   }
 }

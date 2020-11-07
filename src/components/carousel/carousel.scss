@@ -1,0 +1,68 @@
+.carousel {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   background-color: goldenrod;
+   margin: 0 auto;
+
+   .carousel-item {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: none;
+
+      img {
+         filter: brightness(50%);
+         height: 500px;
+         width: 1000px;
+      }
+   }
+
+   .active {
+      display: block;
+      animation: fade-in 1s;
+   }
+
+   .nav {
+      position: absolute;
+      font-size: 20pt;
+      padding: 5px;
+      color: white;
+      cursor: pointer;
+   }
+
+   .prev {
+      left: 40px;
+   }
+
+   .next {
+      right: 40px;
+   }
+
+   .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      transition: background-color 0.6s ease;
+   }
+
+   .active-dot {
+      background-color: black;
+   }
+
+   .dots {
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      bottom: 10%;
+      padding: 10px 13px;
+      background-color: rgba(255, 255, 255, 0.274);
+      border-radius: 20px;
+   }
+}

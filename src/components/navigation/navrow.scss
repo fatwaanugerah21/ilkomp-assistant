@@ -1,209 +1,209 @@
 .nav-wrapper {
-  padding: 10px 10%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  animation: fade-in 1s ease-in 20ms;
+   padding: 10px 10%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   animation: fade-in 1s ease-in 20ms;
+   z-index: 7;
+   position: relative;
 
-  .burger-menu {
-    display: none;
-  }
-
-  .nav-row {
-    font-size: 18pt;
-    display: flex;
-
-    .close-side-nav {
+   .burger-menu {
       display: none;
-    }
+   }
 
-    .active {
-      opacity: 1;
-    }
-
-    a {
-      margin: auto 20px;
-      color: white;
-      opacity: 0.5;
-    }
-
-    a:hover {
-      opacity: 1;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-wrapper {
-    .burger-menu {
-      display: block !important;
-      cursor: pointer !important;
-    }
-
-    .burger-menu:hover {
-      transform: scale(1.3);
-      // filter: brightness(130%);
-      transition-duration: 0.5s;
-    }
-
-    .close-side-nav {
-      display: block !important;
-      width: fit-content;
-      position: absolute;
-      right: 67px;
-      top: 50px;
-      cursor: pointer;
-    }
-
-    .close-side-nav:hover {
-      transform: scale(1.3);
-      filter: brightness(120%);
-      transition-duration: 0.5s;
-    }
-
-    .nav-row {
+   .nav-row {
       font-size: 18pt;
-      position: fixed;
-      left: 0;
-      top: -25px;
-      height: 100%;
-      width: 100%;
-      background-color: rgb(22, 21, 21);
-      z-index: 10;
-      padding-top: 50px;
-      flex-direction: column;
-      animation-name: side-menu-animation;
-      animation-duration: 0.6s;
+      display: flex;
+
+      .close-side-nav {
+         display: none;
+      }
+
+      .active {
+         opacity: 1;
+      }
 
       a {
-        opacity: 0.7 !important;
+         margin: auto 20px;
+         color: white;
+         opacity: 0.5;
       }
 
       a:hover {
-        opacity: 1 !important;
+         opacity: 1;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .nav-wrapper {
+      .burger-menu {
+         display: block !important;
+         cursor: pointer !important;
       }
 
-      .nav-item {
-        padding-top: 30px;
-        width: 100%;
-        height: 60px;
-        margin-left: -40px;
-        text-align: center;
-        z-index: 20;
-        top: -30px;
-        position: relative;
-        border-bottom: 2px solid white;
+      .burger-menu:hover {
+         transform: scale(1.3);
+         // filter: brightness(130%);
+         transition-duration: 0.5s;
       }
 
-      .nav-item1 {
-        animation-name: side-menu-item;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
+      .close-side-nav {
+         display: block !important;
+         width: fit-content;
+         position: absolute;
+         right: 67px;
+         top: 50px;
+         cursor: pointer;
       }
 
-      .nav-item2 {
-        animation-name: side-menu-item;
-        animation-duration: 1.4s;
-        animation-fill-mode: forwards;
+      .close-side-nav:hover {
+         transform: scale(1.3);
+         filter: brightness(120%);
+         transition-duration: 0.5s;
       }
 
-      .nav-item3 {
-        animation-name: side-menu-item;
-        animation-duration: 1.7s;
-        animation-fill-mode: forwards;
-      }
+      .nav-row {
+         font-size: 18pt;
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100vh;
+         background-color: rgb(22, 21, 21);
+         z-index: 4;
+         padding-top: 50px;
+         flex-direction: column;
+         animation-name: side-menu-animation;
+         animation-duration: 0.6s;
 
-      .nav-item:hover {
-        background-color: rgba(99, 85, 85, 0.459);
+         a {
+            opacity: 0.7 !important;
+         }
 
-        a {
-          opacity: 1;
-        }
+         a:hover {
+            opacity: 1 !important;
+         }
+
+         .nav-item {
+            padding-top: 30px;
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            z-index: 7;
+            position: relative;
+            border-bottom: 2px solid white;
+         }
+
+         .nav-item1 {
+            animation-name: side-menu-item;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+         }
+
+         .nav-item2 {
+            animation-name: side-menu-item;
+            animation-duration: 1.4s;
+            animation-fill-mode: forwards;
+         }
+
+         .nav-item3 {
+            animation-name: side-menu-item;
+            animation-duration: 1.7s;
+            animation-fill-mode: forwards;
+         }
+
+         .nav-item:hover {
+            background-color: rgba(99, 85, 85, 0.459);
+
+            a {
+               opacity: 1;
+            }
+         }
       }
-    }
-  }
+   }
 }
 
 @keyframes side-menu-animation {
-  from {
-    width: 0;
-  }
+   from {
+      width: 0;
+   }
 
-  to {
-    width: 100%;
-  }
+   to {
+      width: 100%;
+   }
 }
 
 @keyframes side-menu-item {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
+   from {
+      opacity: 0;
+      transform: translateY(100px);
+   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
 }
 
 @media (min-width: 768px) {
-  .nav-wrapper {
-    .nav-row {
-      font-size: 14pt;
-      margin: -1000px 0;
-      display: flex;
-      align-items: stretch;
+   .nav-wrapper {
+      .nav-row {
+         font-size: 14pt;
+         margin: -1000px 0;
+         display: flex;
+         align-items: stretch;
 
-      .active {
-        border-bottom: 2px solid white;
-        background-color: rgba(255, 255, 255, 0.04);
-        width: 100px;
-        margin-right: -15px;
-      }
+         .active {
+            border-bottom: 2px solid white;
+            background-color: rgba(255, 255, 255, 0.04);
+            width: 100px;
+            margin-right: -15px;
+         }
 
-      .nav-item {
-        margin-right: -35px;
-        width: 100px;
-        text-align: center;
-        padding: 29.5px 0;
-        border-bottom: 2px solid transparent;
-      }
+         .nav-item {
+            margin-right: -35px;
+            width: 100px;
+            text-align: center;
+            padding: 29.5px 0;
+            border-bottom: 2px solid transparent;
+         }
 
-      .nav-item:hover {
-        border-bottom: 2px solid white;
-        background-color: rgba(255, 255, 255, 0.04);
+         .nav-item:hover {
+            border-bottom: 2px solid white;
+            background-color: rgba(255, 255, 255, 0.04);
+         }
       }
-    }
-  }
+   }
 }
 @media (min-width: 1000px) {
-  .nav-wrapper {
-    .nav-row {
-      font-size: 16pt;
-      margin: -1000px 0;
-      display: flex;
-      // align-items: stretch;
+   .nav-wrapper {
+      .nav-row {
+         font-size: 16pt;
+         margin: -1000px 0;
+         display: flex;
+         // align-items: stretch;
 
-      .active {
-        border-bottom: 2px solid white;
-        background-color: rgba(255, 255, 255, 0.04);
-        width: 120px;
-        margin-right: -10px;
-      }
+         .active {
+            border-bottom: 2px solid white;
+            background-color: rgba(255, 255, 255, 0.04);
+            width: 120px;
+            margin-right: -10px;
+         }
 
-      .nav-item {
-        margin-right: -30px;
-        // background-color: green;
-        width: 120px;
-        text-align: center;
-        padding: 28.3px 0;
-        border-bottom: 2px solid transparent;
-      }
+         .nav-item {
+            margin-right: -30px;
+            // background-color: green;
+            width: 120px;
+            text-align: center;
+            padding: 28.3px 0;
+            border-bottom: 2px solid transparent;
+         }
 
-      .nav-item:hover {
-        border-bottom: 2px solid white;
-        background-color: rgba(255, 255, 255, 0.04);
+         .nav-item:hover {
+            border-bottom: 2px solid white;
+            background-color: rgba(255, 255, 255, 0.04);
+         }
       }
-    }
-  }
+   }
 }

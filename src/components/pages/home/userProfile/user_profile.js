@@ -3,9 +3,9 @@ import FatwaPicture from "./alAlam.jpg";
 import { Link } from "react-router-dom";
 import "./user_profile.min.css";
 
-const UserProfile = () => {
+const UserProfile = (props) => {
   return (
-    <div className="user-profil">
+    <div className={props.className}>
       <section className="profil-avatar">
         <img src={FatwaPicture} alt="Fatwa" />
       </section>

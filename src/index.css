@@ -1,85 +1,96 @@
 * {
-  padding: 0;
-  margin: 0;
-  transition: all 400ms;
-  box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   transition: all 400ms;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+   
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1a2e;
+   font-family: "Times New Roman", Times, serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   background-color: #1a1a2e;
 }
 
 .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .card {
-  padding: 0.5% 1%;
+   padding: 0.5% 1%;
 }
 
 .second-background-color {
-  background-color: #341850;
+   background-color: #341850;
 }
 
 .display-none {
-  display: none !important;
+   display: none !important;
 }
 
 .none {
-  display: none !important;
+   display: none !important;
 }
 
 .menu {
-  cursor: pointer;
+   cursor: pointer;
 }
 
 .title {
-  font-size: 20pt;
-  font-weight: 600;
+   font-size: 20pt;
+   font-weight: 600;
 }
 
 .container {
-  margin: 0 10%;
+   margin: 0 10%;
 }
 
 .hide-on-mobile {
-  display: none !important;
+   display: none !important;
 }
 
 .active {
-  display: flex !important;
+   display: flex !important;
 }
 
+.card-title {
+   font-size: 16pt;
+   font-weight: 700;
+}
+
+.page {
+   background-image: linear-gradient(to right, #79b2ba, #71e3f1);
+   padding: 20px 0;
+}
 li {
-  list-style: none;
+   list-style: none;
 }
 
 a {
-  outline: none;
-  text-decoration: none;
-  cursor: pointer;
+   outline: none;
+   text-decoration: none;
+   cursor: pointer;
 }
 
 .white-text {
-  color: white;
+   color: white;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
 }
 
 .app {
-  height: 100vh !important;
+   height: 100vh !important;
 }
 
 @media (min-width: 768px) {
-  .hide-on-mobile {
-    display: flex !important;
-  }
+   .hide-on-mobile {
+      display: flex !important;
+   }
 }
