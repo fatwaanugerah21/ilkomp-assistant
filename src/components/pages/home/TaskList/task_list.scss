@@ -21,7 +21,7 @@
       justify-content: center;
 
       h1 {
-         font-size: 18pt !important;
+         font-size: 25pt;
       }
    }
 }
@@ -29,4 +29,23 @@
 .task-list-menu:hover {
    transform: scale(1.1);
    transition-duration: 0.3s;
+}
+
+@media (max-width: 700px) {
+   .task-list {
+      .mask {
+         h1 {
+            font-size: 16pt;
+         }
+      }
+   }
+}
+@media (max-width: 1000px) {
+   .task-list {
+      .mask {
+         h1 {
+            font-size: 22pt;
+         }
+      }
+   }
 }

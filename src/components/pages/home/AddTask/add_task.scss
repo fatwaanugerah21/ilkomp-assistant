@@ -22,7 +22,7 @@
    }
 
    h1 {
-      font-size: 16pt !important;
+      font-size: 21pt;
    }
 }
 
@@ -31,8 +31,21 @@
    transition-duration: 0.3s;
 }
 
-@media (max-width: 500px) {
-   h1 {
-      font-size: 16pt;
+@media (max-width: 700px) {
+   .add-task-menu {
+      .mask {
+         h1 {
+            font-size: 16pt;
+         }
+      }
+   }
+}
+@media (max-width: 1000px) {
+   .add-task-menu {
+      .mask {
+         h1 {
+            font-size: 28pt;
+         }
+      }
    }
 }

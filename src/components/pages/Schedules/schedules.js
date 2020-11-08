@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import { Carousel } from "../../carousel/carousel";
 import "./schedules.min.css";
+import { StringLimiter } from "../../tools/stringLimiter";
 
 const Schedules = () => {
    const [device, setDevice] = useState("");
@@ -52,6 +52,30 @@ const Schedules = () => {
       },
    ];
 
+   const secondDisplay = (schedule) => {
+      return (
+         <div className="info-container">
+            <span className="title">{StringLimiter(schedule.name, 18)}</span>
+            <li>
+               <p className="ask-info">Dosen</p>
+               <span>{schedule.lecturer}</span>
+            </li>
+            <li>
+               <p className="ask-info">Ketua</p>
+               <span>{schedule.chief}</span>
+            </li>
+            <li>
+               <p className="ask-info">Jadwal</p>
+               <span>{schedule.time}</span>
+            </li>
+            <li>
+               <p className="ask-info">Ruangan</p>
+               <span>{schedule.room}</span>
+            </li>
+         </div>
+      );
+   };
+
    const schedules = schedulesList.map((schedule) => {
       return (
          <div
@@ -85,24 +109,7 @@ const Schedules = () => {
                </div>
             </div>
             <div className="back-card flip-card-content">
-               <div className="back-card-container">
-                  <h1 className="card-title">{schedule.name}</h1>
-                  <li>
-                     <span>Dosen</span> <span>: {schedule.lecturer}</span>
-                  </li>
-                  <li>
-                     Ketua Kelas <span>: {schedule.chief}</span>
-                  </li>
-                  <li>
-                     Waktu <span>: {schedule.time}</span>
-                  </li>
-                  <li>
-                     Ruangan <span>: {schedule.room}</span>
-                  </li>
-                  <li>
-                     Buku <span>: {schedule.book}</span>
-                  </li>
-               </div>
+               {secondDisplay(schedule)}
             </div>
          </div>
       );
