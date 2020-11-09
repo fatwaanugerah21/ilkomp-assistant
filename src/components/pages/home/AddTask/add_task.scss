@@ -1,4 +1,5 @@
 .add-task-menu {
+   text-align: center;
    position: relative;
    width: 45%;
    height: 120px;
@@ -6,7 +7,6 @@
    background-position-y: center;
    background-size: cover;
    border-radius: 20px;
-
    .mask {
       position: absolute;
       top: 0;
@@ -19,10 +19,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-   }
 
-   h1 {
-      font-size: 21pt;
+      .menu-name {
+         font-size: 17pt;
+      }
    }
 }
 
@@ -31,19 +31,19 @@
    transition-duration: 0.3s;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 700px) {
    .add-task-menu {
       .mask {
-         h1 {
-            font-size: 16pt;
+         .menu-name {
+            font-size: 24pt;
          }
       }
    }
 }
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
    .add-task-menu {
       .mask {
-         h1 {
+         .menu-name {
             font-size: 28pt;
          }
       }

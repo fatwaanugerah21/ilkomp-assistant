@@ -13,6 +13,7 @@
    }
 
    .homepage-menu {
+      text-align: center;
       margin: 100px 2% 50px;
       display: flex;
       flex-direction: column;
@@ -46,21 +47,10 @@
    right: -10%;
 }
 
-@media (min-width: 768px) {
-   .homepage-menu {
-      h1 {
-         font-size: 25pt;
-      }
-   }
-}
-
 @media (min-width: 1000px) {
    .homepage-background {
       .homepage-menu {
          margin: 120px 8.5% 60px;
-         h1 {
-            font-size: 30pt;
-         }
       }
    }
 }
