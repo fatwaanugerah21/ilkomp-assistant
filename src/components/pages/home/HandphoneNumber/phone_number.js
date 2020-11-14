@@ -8,7 +8,7 @@ const PhoneNumberMenu = () => {
       <div className="phone-number-menu-in">
          <Link to="phone-number">
             <div className="mask">
-               <h1>Phone Number</h1>
+               <h1 className="menu-name">Phone Number</h1>
             </div>
          </Link>
       </div>

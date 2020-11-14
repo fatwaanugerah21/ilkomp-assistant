@@ -1,4 +1,5 @@
 .schedules-page {
+   color: black !important;
    .main-title {
       text-align: center;
       font-size: 16pt;
@@ -11,24 +12,25 @@
       justify-content: space-around;
       flex-wrap: wrap;
 
+      .flip-card-content {
+         box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.1);
+         width: 100%;
+         height: 100%;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         backface-visibility: hidden;
+         position: absolute;
+         overflow: hidden;
+         transition: transform 0.4s linear;
+         border-radius: 12px;
+      }
+
       .laptop {
          width: 220px;
          height: 320px;
          position: relative;
          margin: 30px 26px;
          cursor: pointer;
-
-         .flip-card-content {
-            width: 100%;
-            height: 100%;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            backface-visibility: hidden;
-            position: absolute;
-            overflow: hidden;
-            transition: transform 0.4s linear;
-            border-radius: 12px;
-         }
 
          .front-card {
             background-color: white;
@@ -67,7 +69,7 @@
 
       .back-card {
          transform: perspective(1000px) rotateY(180deg);
-         color: #2c3e50;
+         color: black;
          text-align: center;
       }
 
@@ -87,19 +89,6 @@
       height: 320px;
       position: relative;
       margin: 30px 26px;
-
-      .flip-card-content {
-         width: 100%;
-         height: 100%;
-         border-top-left-radius: 5px;
-         border-top-right-radius: 5px;
-         backface-visibility: hidden;
-         position: absolute;
-         overflow: hidden;
-         transition: transform 0.4s linear;
-         border-radius: 12px;
-         cursor: pointer;
-      }
 
       .front-card {
          background-color: white;
@@ -137,7 +126,7 @@
 
       .back-card {
          width: 0;
-         color: #2c3e50;
+         color: black;
          text-align: center;
          transition: all 0.6s;
          transform: rotateX(180deg);
@@ -151,7 +140,7 @@
          background: #f1f1f1;
          transform: rotateY(180deg);
          transform: none;
-         color: #2c3e50;
+         color: black;
          z-index: 1000 !important;
          text-align: center;
       }

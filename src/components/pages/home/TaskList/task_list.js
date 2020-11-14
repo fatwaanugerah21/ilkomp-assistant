@@ -5,11 +5,13 @@ import "./task_list.min.css";
 const TaskList = () => {
    return (
       <div className="task-list-menu">
-         <div className="mask">
-            <Link to="/task-list">
-               <h1 className="menu-name">Daftar Tugas</h1>
-            </Link>
-         </div>
+         <Link to="/task-list">
+            <div className="mask">
+               <Link to="/task-list">
+                  <h1 className="menu-name">Daftar Tugas</h1>
+               </Link>
+            </div>
+         </Link>
       </div>
    );
 };

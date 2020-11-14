@@ -21,7 +21,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "predeploy": "npm run build \"git add .\" \"git commit\"",
+    "predeploy": "npm run build && git add . && git commit",
     "deploy": "git push",
     "start": "react-scripts start",
     "build": "react-scripts build",

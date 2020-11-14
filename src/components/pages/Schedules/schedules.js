@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./schedules.min.css";
 import { StringLimiter } from "../../tools/stringLimiter";
+import AddSchedule from "./AddSchedule/AddSchedule";
+import { OtherMenuItem } from "../../tools/OtherMenu";
 
 const Schedules = () => {
    const [device, setDevice] = useState("");
@@ -13,6 +15,7 @@ const Schedules = () => {
    }, [device]);
 
    const [bottomIsOpen, setBottomIsOpen] = useState(false);
+   const [showModal, setShowModal] = useState(false);
 
    const showBack = (e) => {
       if (device === "phone") {
@@ -117,8 +120,13 @@ const Schedules = () => {
 
    return (
       <div className="schedules-page container page">
+         <AddSchedule show={showModal} onClick={() => setShowModal(false)} />
          <h1 className="main-title">Jadwal Matakuliah Ilkomp Semester 3</h1>
          <div className="schedules">{schedules}</div>
+         <OtherMenuItem
+            onClick={() => setShowModal(true)}
+            text="Tambah Jadwal Mata Kuliah"
+         />
       </div>
    );
 };

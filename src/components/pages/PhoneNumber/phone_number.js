@@ -10,6 +10,7 @@ import Loader from "react-loader-spinner";
 import OwnModal from "../../modal/ownModal";
 import { insertionSort } from "../../tools/algorithm";
 import { Orderer } from "../../tools/ordering/order";
+import { OtherMenuItem } from "../../tools/OtherMenu";
 
 const PhoneNumber = (props) => {
    var { firestoreData } = props;
@@ -105,12 +106,10 @@ const PhoneNumber = (props) => {
          </div>
          <div className="row">
             <div className="lecturer-info-container">{lecturerList}</div>
-            <div
-               className="other-menu-item white-text"
+            <OtherMenuItem
                onClick={() => setShowModal(true)}
-            >
-               Tambah Nomor Handphone
-            </div>
+               text="Tambah Nomor Handphone"
+            />
          </div>
       </div>
    );
