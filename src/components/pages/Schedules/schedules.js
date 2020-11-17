@@ -27,7 +27,6 @@ const Schedules = () => {
             setBottomIsOpen(false);
          }
       }
-      console.log(e.classList);
    };
 
    const schedulesList = [
