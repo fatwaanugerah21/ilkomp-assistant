@@ -15,26 +15,26 @@ import "./animations.css";
 firebase.initializeApp(firebaseConfig);
 
 const store = createStore(
-  rootReducer,
-  compose(applyMiddleware(thunk.withExtraArgument({ getFirebase })))
+   rootReducer,
+   compose(applyMiddleware(thunk.withExtraArgument({ getFirebase })))
 );
 
 const rrfProps = {
-  firebase,
-  config: firebaseConfig,
-  dispatch: store.dispatch,
+   firebase,
+   config: firebaseConfig,
+   dispatch: store.dispatch,
 };
 
 ReactDOM.render(
-  <Provider store={store}>
-    <ReactReduxFirebaseProvider {...rrfProps}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-      ,
-    </ReactReduxFirebaseProvider>
-  </Provider>,
-  document.getElementById("root")
+   <Provider store={store}>
+      <ReactReduxFirebaseProvider {...rrfProps}>
+         <React.StrictMode>
+            <App />
+         </React.StrictMode>
+         ,
+      </ReactReduxFirebaseProvider>
+   </Provider>,
+   document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

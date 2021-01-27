@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f7c0cc9.chunk.css",
-    "main.js": "/static/js/main.16af80d9.chunk.js",
-    "main.js.map": "/static/js/main.16af80d9.chunk.js.map",
+    "main.css": "/static/css/main.f6a84698.chunk.css",
+    "main.js": "/static/js/main.f608a9da.chunk.js",
+    "main.js.map": "/static/js/main.f608a9da.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3647ef8b.js",
     "runtime-main.js.map": "/static/js/runtime-main.3647ef8b.js.map",
     "static/css/2.f2c13908.chunk.css": "/static/css/2.f2c13908.chunk.css",
-    "static/js/2.06d99bcf.chunk.js": "/static/js/2.06d99bcf.chunk.js",
-    "static/js/2.06d99bcf.chunk.js.map": "/static/js/2.06d99bcf.chunk.js.map",
+    "static/js/2.a80e15e1.chunk.js": "/static/js/2.a80e15e1.chunk.js",
+    "static/js/2.a80e15e1.chunk.js.map": "/static/js/2.a80e15e1.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.f2c13908.chunk.css.map": "/static/css/2.f2c13908.chunk.css.map",
-    "static/css/main.9f7c0cc9.chunk.css.map": "/static/css/main.9f7c0cc9.chunk.css.map",
-    "static/js/2.06d99bcf.chunk.js.LICENSE.txt": "/static/js/2.06d99bcf.chunk.js.LICENSE.txt",
+    "static/css/main.f6a84698.chunk.css.map": "/static/css/main.f6a84698.chunk.css.map",
+    "static/js/2.a80e15e1.chunk.js.LICENSE.txt": "/static/js/2.a80e15e1.chunk.js.LICENSE.txt",
     "static/media/CloseIcon.c4abb3db.svg": "/static/media/CloseIcon.c4abb3db.svg",
     "static/media/Group 2.5a68d7e0.svg": "/static/media/Group 2.5a68d7e0.svg",
     "static/media/alAlam.279bab87.jpg": "/static/media/alAlam.279bab87.jpg",
@@ -19,17 +19,17 @@
     "static/media/facebook.02535181.svg": "/static/media/facebook.02535181.svg",
     "static/media/instagram.e8286fef.svg": "/static/media/instagram.e8286fef.svg",
     "static/media/linkedin.f42e04d0.svg": "/static/media/linkedin.f42e04d0.svg",
-    "static/media/add_task.min.css": "/static/media/new-task.be28262f.jpg",
-    "static/media/phone_number.css": "/static/media/phone-number.5c9dbbc3.jpg",
-    "static/media/schedule.css": "/static/media/schedule.08869bbf.jpg",
-    "static/media/task_list.min.css": "/static/media/task-list.c7442e73.jpg",
+    "static/media/add_task.min.css": "/static/media/new-task.b7078428.jpg",
+    "static/media/phone_number.css": "/static/media/phone-number.194f806c.jpg",
+    "static/media/schedule.css": "/static/media/schedule.2fce9c06.jpg",
+    "static/media/task_list.min.css": "/static/media/task-list.9448971d.jpg",
     "static/media/twitter.f9992582.svg": "/static/media/twitter.f9992582.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3647ef8b.js",
     "static/css/2.f2c13908.chunk.css",
-    "static/js/2.06d99bcf.chunk.js",
-    "static/css/main.9f7c0cc9.chunk.css",
-    "static/js/main.16af80d9.chunk.js"
+    "static/js/2.a80e15e1.chunk.js",
+    "static/css/main.f6a84698.chunk.css",
+    "static/js/main.f608a9da.chunk.js"
   ]
 }
